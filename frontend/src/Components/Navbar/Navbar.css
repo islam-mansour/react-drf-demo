@@ -1,0 +1,118 @@
+/* Write your CSS here */
+.nav-bar-container-light {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #343a40 !important;
+    border-bottom-style: solid;
+    border-bottom-color: #dcdcdc;
+    border-bottom-width: 2px;
+    height: 60px;
+  }
+  
+  .website-logo {
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+  }
+  
+  .middle-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0px;
+  }
+  
+  .list-item {
+    font-size: 16px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .link-light {
+    color: #171f46;
+    text-decoration: none;
+  }
+  
+  .theme-button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-style: none;
+    outline: none;
+  }
+  
+  .theme-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .nav-bar-container-dark {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #333333;
+    height: 60px;
+  }
+  
+  .link-dark {
+    color: white;
+    text-decoration: none;
+  }
+
+
+  img {
+    width: 25px;
+    border-radius: 50px;
+    float: left;
+  }
+  
+  .logout {
+    font-size: .8em;
+    font-family: 'Oswald', sans-serif;
+      position: relative;
+    right: -18px;
+    bottom: -4px;
+    overflow: hidden;
+    letter-spacing: 3px;
+    opacity: 0;
+    transition: opacity .45s;
+    -webkit-transition: opacity .35s;
+    
+  }
+  
+  .button {
+    text-decoration: none;
+    float: right;
+    padding: 12px;
+    margin: 15px;
+    color: white !important;
+    width: 25px;
+    background-color: black;
+    transition: width .35s;
+    -webkit-transition: width .35s;
+    overflow: hidden;
+    box-sizing: content-box;
+  }
+  
+  a:hover {
+    width: 100px;
+  }
+  
+  a:hover .logout{
+    opacity: .9;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+    

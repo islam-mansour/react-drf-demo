@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  api:
+    build: ./backend
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    container_name: api
+    volumes:
+      - /backend:/music_service
+    ports:
+      - "8000:8000"
+
+  ui:
+    container_name: ui
+    build: ./frontend
+    volumes:
+        - '.:/app'
+    ports:
+        - 3000:3000
+    environment:
+        - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_DB=db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_PORT=5432
+volumes:
+  postgres:
